@@ -1,0 +1,20 @@
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'external.css' %}">
+</head>
+<body>
+    <h1>WELCOME ADMIN</h1>
+    <div class="maindiv">
+        <div class="sub1"><a href="{% url 'reg' %}">Registration</a></div>
+        <div class="sub1"><a href="{% url 'login' %}">Login</a></div>
+        <div class="sub1"></div>
+        <div class="sub1"></div>
+        <div class="sub1"></div>
+
+    </div>
+</body>
+</html>
