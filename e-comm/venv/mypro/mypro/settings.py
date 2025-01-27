@@ -23,10 +23,11 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-f6w#t_yn8kr^i95wn0b(z2()si^%710oa1(56!=n@r5(uvi(da'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+# ALLOWED_HOSTS = ['myapp.onrender.com','www.mycustomdomain.com']
 
+ALLOWED_HOSTS = ['127.0.0.1', 'localhost']
 
 # Application definition
 
@@ -120,8 +121,9 @@ STATIC_URL = 'static/'
 
 
 import os
-STATIC_DIR=os.path.join(BASE_DIR,"static")
-STATICFILES_DIRS=[STATIC_DIR]
+STATIC_URL = '/static/'
+STATIC_ROOT = BASE_DIR / 'staticfiles'
+
 
 MEDIA_ROOT=os.path.join(BASE_DIR,"MEDIA")
 MEDIA_URL='/media/'
