@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-f6w#t_yn8kr^i95wn0b(z2()si^%710oa1(56!=n@r5(uvi(da
 DEBUG = False
 
 # ALLOWED_HOSTS = []
-ALLOWED_HOSTS = ['myapp.onrender.com', 'ecomm.com']
+ALLOWED_HOSTS = ['ecomm.pythonanywhere.com']
 
 
 # Application definition

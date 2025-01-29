@@ -19,7 +19,7 @@ def list(request,id):
     return HttpResponse(template.render(context,request))
 def addcart(request):
     if request.method=="POST":
-        c=cart()
+        c=cart() 
         data=Product.objects.get(id=request.session["pid"])
         c.date=datetime.datetime.today()
         c.qty=request.POST.get("qty")
