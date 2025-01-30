@@ -11,6 +11,8 @@ https://docs.djangoproject.com/en/5.1/ref/settings/
 """
 
 from pathlib import Path
+# import environ
+
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -28,6 +30,10 @@ DEBUG = False
 # ALLOWED_HOSTS = []
 ALLOWED_HOSTS = ['myapp.onrender.com', 'ecomm.com']
 
+# env = environ.Env()
+# environ.Env.read_env()
+# SECRET_KEY = env("SECRET_KEY")
+# DEBUG = env.bool("DEBUG", default=False)
 
 
 # Application definition
@@ -122,12 +128,13 @@ STATIC_URL = 'static/'
 
 
 import os
-STATIC_URL = '/static/'
-STATIC_ROOT = BASE_DIR / 'staticfiles'
 
+STATIC_URL = "/static/"
+STATIC_ROOT = os.path.join(BASE_DIR, "staticfiles")
 
-MEDIA_ROOT=os.path.join(BASE_DIR,"MEDIA")
-MEDIA_URL='/media/'
+MEDIA_URL = "/media/"
+MEDIA_ROOT = os.path.join(BASE_DIR, "media")
+
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
 
