@@ -1,0 +1,32 @@
+<html>
+    <head>
+
+    </head>
+    <body style="background-color: darkgreen;">
+        <h1 align="center" style="color: cadetblue;">Login Form</h1>
+        <div style="background-color: blueviolet;height: 70%; width:50%;margin: auto;margin-bottom: 150px;">
+        <form method="post" action="{% url 'login' %}">
+            {% csrf_token %}
+            <table align="center" border="1"  style="border: brown;padding: 40px; color:white ">
+            <tr>
+                <th><label for="Name">Username</label></th>
+                <td><input type="text" name="uname" ></td>
+            </tr>
+            <tr>
+                <th><label for="Password">Password</label></th>
+                <td><input type="password" name="pwd"></td>
+            </tr>
+           
+            <tr>
+               <th></th>
+                <td><input type="submit" name="submit" value="Login"></td>
+            </tr>
+            </table>
+        </form>
+        </div>  
+        
+        <footer style="background-color: cornflowerblue;padding:3px;text-align: center;color: white;">
+<p>Copyright 2021. All Rights Reserved</p>
+        </footer>
+    </body>
+</html>
